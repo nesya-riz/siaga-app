@@ -1,0 +1,188 @@
+/* ===== SIAGA Design System ===== */
+:root {
+    --bg: #F5F5F2;
+    --surface: #FFFFFF;
+    --border: #D3D1C7;
+    --teal: #0F6E56;
+    --teal-bg: #E1F5EE;
+    --text: #2C2C2A;
+    --muted: #888780;
+    --danger: #A32D2D;
+    --danger-bg: #FCEBEB;
+    --success-bg: #EAF3DE;
+    --success-text: #3B6D11;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+a { color: var(--teal); }
+
+.auth-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.auth-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-card h1 {
+    color: var(--teal);
+    font-size: 28px;
+    text-align: center;
+    margin: 0 0 4px;
+}
+
+.auth-card .subtitle {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.auth-card h2 {
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+.field { margin-bottom: 16px; }
+
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.field .error {
+    color: var(--danger);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: var(--teal);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover { opacity: 0.92; }
+
+.alert {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.alert-success { background: var(--success-bg); color: var(--success-text); }
+.alert-danger { background: var(--danger-bg); color: var(--danger); }
+
+.link-row {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ===== App shell (halaman setelah login) ===== */
+.app-shell { display: flex; min-height: 100vh; }
+
+.sidebar {
+    width: 240px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .brand { color: var(--teal); font-weight: 700; font-size: 20px; margin: 0; }
+.sidebar .brand-sub { color: var(--muted); font-size: 10px; margin: 0 0 24px; }
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.sidebar nav a.active {
+    background: var(--teal-bg);
+    color: var(--teal);
+    font-weight: 600;
+}
+
+.sidebar .user-card {
+    margin-top: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.sidebar .user-card .name { font-weight: 600; font-size: 12px; }
+.sidebar .user-card .role { color: var(--muted); font-size: 10px; }
+.sidebar form { margin-top: 8px; }
+.sidebar .logout-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 11px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.main { flex: 1; padding: 32px 40px; }
+.main h1 { margin: 0 0 4px; }
+.main .page-sub { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+
+.cards-row { display: flex; gap: 16px; margin-bottom: 24px; }
+
+.summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    flex: 1;
+}
+
+.summary-card .label { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.summary-card .value { font-size: 28px; font-weight: 700; }
